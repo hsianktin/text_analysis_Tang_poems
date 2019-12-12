@@ -1,6 +1,6 @@
 # file import
 import sys
-import tensorflow as tf
+import tensorflow as tf  # specifically, please use tensorflow 1.x
 from collections import defaultdict
 import seaborn as sns
 import pandas as pd
@@ -16,8 +16,6 @@ text = file.read()
 file.close()
 # split and create regular poems
 
-# I'm using WSL2, thus in order to provide chinese support, I need to configure fonts myself
-plt.rcParams['font.sans-serif'] = ['Taipei Sans TC Beta']
 pattern = u'卷.[0-9]+'
 poems = re.split(pattern, text)[1:]
 regular_poems = []
@@ -63,12 +61,6 @@ for sentence in sentences:
             if nb_word != word:
                 ncount += 1
                 data.append([word, nb_word])
-                if ncount % 2000 == 0:
-                    print("length : memory"+str(len(data)) +
-                          ":"+str(sys.getsizeof(data)))
-# BUT actually we don't need this, because we consider each character in the poem as a word, that is to say, a vector
-# convert to unit vector.
-# I met a memory problem. It's not the result of data
 
 
 def unit_vectorization(data_point_index, vocab_size):
@@ -118,8 +110,8 @@ for _ in range(n_iters):
     count += 1
     sess.run(train_step, feed_dict={x: x_train, y_label: y_train})
     if count % 10 == 1:
-        print(str(count)+'th iteration, loss is : ', sess.run(cross_entropy_loss,
-                                                              feed_dict={x: x_train, y_label: y_train}))
+        print(str(count)+'th iteration, loss is : ',
+              sess.run(cross_entropy_loss, feed_dict={x: x_train, y_label: y_train}))
     if count % 100 == 0:
         save_path = saver.save(sess, checkpoint_path)
 
