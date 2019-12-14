@@ -17,9 +17,10 @@ for poem in poems:
     regular_poems.append('\n'.join(tmp_poem[1:]))
 # Word frequency
 data = ("".join(regular_poems)).replace('\n', "").replace('。', '').replace('，', '').replace(
-    '：', '').replace('；', '').replace('？', '').replace('！', '').replace('（[.*]*?）', '')
-stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因')
-data = stopwords.sub('', data)[0:1000]  # sample calculation; reduced size
+    '：', '').replace('；', '').replace('？', '').replace('！', '')
+stopwords = re.compile(
+    u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|(|)|[1-9]|-')
+data = stopwords.sub('', data)  # only w2v calculation need truncation
 data = list(data)
 wordlist = set(data)
 dict = {}
@@ -52,7 +53,7 @@ N = len(ngram_list)
 for word in ngram_list:
     n += 1
     dict_2gram[word] = data_2gram.count(word)*100/N
-    print(str(n)+" out of "+str(N)+" ic completed...\n")
+    print(str(n)+" out of "+str(N)+" ic completed...\n") if n % 10 == 0
 dict_2gram_sorted = sorted(
     dict_2gram.items(), key=lambda d: d[1], reverse=True)
 
