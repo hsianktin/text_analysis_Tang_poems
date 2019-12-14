@@ -64,7 +64,6 @@ centrality = nx.betweenness_centrality(G, k=None, normalized=True,
 weighted_centrality_sorted = sorted(
     centrality.items(), key=lambda x: x[1], reverse=True)
 nodelist = [x[0] for x in weighted_centrality_sorted]
-print(nodelist)
 print(weighted_centrality_sorted)
 nodelabels = {}
 count = 0
@@ -72,11 +71,10 @@ for x in nodelist:
     count += 1
     nodelabels[x] = x if count < 20 else ''
 weight_list = [x[1] for x in weighted_centrality_sorted]
-size_list = [x/np.mean(weight_list)*50 for x in weight_list]
-print(size_list)
-centrality_layout = nx.kamada_kawai_layout(
+size_list = [(x/np.mean(weight_list))**2*50 for x in weight_list]
+centrality_layout = nx.spring_layout(
     G, dist=None, pos=None, weight='weight', scale=1, center=None, dim=2)
 
-nx.draw_spring(G, labels=nodelabels, nodelist=nodelist,
-               node_size=size_list, linewidth=0.1, font_color='w', edge_color='k')
+nx.draw(G, pos=centrality_layout, labels=nodelabels, nodelist=nodelist,
+        node_size=size_list, linewidth=0.1, font_color='w', edge_color='k')
 plt.savefig('./output/network.png')
