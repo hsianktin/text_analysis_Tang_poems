@@ -234,7 +234,7 @@ w2v.train(training_data)
 filename_w2v = './output/w2v_matrix.txt'
 with open(filename_w2v, 'w') as f:
     f.write("字\t对应向量\t训练样本数"+str(N))
-    for x in w2v.word_list:
+    for x in w2v.words_list:
         f.write("\n"+x+"\t"+str(w2v.word_vec(x)))
 filename_w2v_sample = "./output/w2v_sample.txt"
 sample = ['思', '悲', '忧', '愁', '怒', '惧', '乐']

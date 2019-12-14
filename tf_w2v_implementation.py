@@ -22,7 +22,8 @@ regular_poems = []
 regular_title = []
 corpus = []
 N = 500  # total number of samples
-stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|-|（|）')
+stopwords = re.compile(
+    u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|-|（|）|[0-9]')
 for poem in poems:
     tmp_poem = poem.strip('\n\u3000\u3000◎')
     tmp_poem = tmp_poem.replace('\u3000\u3000', '').split('\n')
@@ -103,6 +104,7 @@ train_step = tf.train.GradientDescentOptimizer(
     0.1).minimize(cross_entropy_loss)
 print('Start calculating')
 # train for n_iter iterations
+n_iters = 10000
 saver = tf.train.Saver()
 checkpoint_path = "/content/drive/My Drive/Colab Notebooks/cp.ckpt"
 count = 0
@@ -130,10 +132,10 @@ def vec_sim(vec, top_n):
         v_w2 = vectors[i]
         theta_sum = np.dot(vec, v_w2)
         theta_den = np.linalg.norm(vec) * np.linalg.norm(v_w2)
-        theta = theta_num / theta_den
+        theta = theta_sum / theta_den
         word = int2word[i]
         word_sim[word] = theta
-    word_sorted = sorterd(word_sim.items(), key=lambda x: x[1], reverse=True)
+    word_sorted = sorted(word_sim.items(), key=lambda x: x[1], reverse=True)
     for word, sim in word_sorted[1:top_n+1]:
         print(word, sim)
     pass

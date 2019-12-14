@@ -19,17 +19,18 @@ for poem in poems:
 data = ("".join(regular_poems)).replace('\n', "").replace('。', '').replace('，', '').replace(
     '：', '').replace('；', '').replace('？', '').replace('！', '')
 stopwords = re.compile(
-    u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|(|)|[1-9]|-')
-data = stopwords.sub('', data)  # only w2v calculation need truncation
+    u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|(|)|[0-9]|-')
+# only w2v calculation need truncation; but it still requires time to run
+data = stopwords.sub('', data)
 data = list(data)
 wordlist = set(data)
 dict = {}
 n = 0
-N = len(wordlist)
+N = len(data)
 for word in wordlist:
     n += 1
     dict[word] = data.count(word)*100/N
-    print(str(n)+" out of "+str(N)+" ic completed...\n")
+    print(str(n)+" out of "+str(N)+" is completed...\n")
 dict_sorted = sorted(dict.items(), key=lambda d: d[1], reverse=True)
 filename_total = './output/word_frequency.txt'
 with open(filename_total, 'w') as f:
@@ -53,7 +54,7 @@ N = len(ngram_list)
 for word in ngram_list:
     n += 1
     dict_2gram[word] = data_2gram.count(word)*100/N
-    print(str(n)+" out of "+str(N)+" ic completed...\n") if n % 10 == 0
+    print(str(n)+" out of "+str(N)+" ic completed...\n") if n % 10 == 0 else None
 dict_2gram_sorted = sorted(
     dict_2gram.items(), key=lambda d: d[1], reverse=True)
 
