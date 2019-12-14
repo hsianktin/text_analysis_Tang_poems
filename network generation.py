@@ -1,13 +1,17 @@
 # file import
+import matplotlib.pyplot as plt
 import nltk
 import re
+import networkx as nx
 file = open("Tang_poems_utf_8.txt")
 text = file.read()
 file.close()
 
 # split and create regular poems
+# This is the font specified. I'm using Ubuntu, so I downloaded a free Chinese font to allow for matplotlib showing Chinese characters.
+plt.rcParams['font.sans-serif'] = ['Taipei Sans TC Beta']
 pattern = u'卷.[0-9]+'
-poems = re.split(pattern, text)[1:]
+poems = re.split(pattern, text)[1:1000]
 regular_poems = []
 regular_title = []
 for poem in poems:
@@ -30,37 +34,24 @@ N = len(data)
 for word in wordlist:
     n += 1
     dict[word] = data.count(word)*100/N
-    print(str(n)+" out of "+str(len(wordlist))+" is completed...\n")
+    print(str(n)+" out of "+str(len(wordlist)) +
+          " is completed...\n") if n % 100 == 0 else None
 dict_sorted = sorted(dict.items(), key=lambda d: d[1], reverse=True)
 filename_total = './output/word_frequency.txt'
 with open(filename_total, 'w') as f:
     f.write("字\t词频=出现次数*100/总字数")
     for i in range(len(dict_sorted)):
         f.write("\n"+dict_sorted[i][0]+"\t"+str(dict_sorted[i][1]))
-# Seasons
-filename_seasons = './output/seasons.txt'
-with open(filename_seasons, 'w') as f:
-    f.write("字\t词频=出现次数*100/总字数")
-    f.write("春\t"+str(dict['春'])+"\n夏\t"+str(dict['夏']) +
-            "\n秋\t"+str(dict['秋'])+"\n冬\t"+str(dict['冬']))
-# Word of 2 characters
-print("Analyzing word of 2 characters frequency")
-ct_ngrams = list(nltk.bigrams(data))
-data_2gram = list(ct_ngrams)
-ngram_list = set(data_2gram)
-dict_2gram = {}
-n = 0
-N = len(ngram_list)
-for word in ngram_list:
-    n += 1
-    dict_2gram[word] = data_2gram.count(word)*100/N
-    print(str(n)+" out of "+str(N)+" ic completed...\n") if n % 10 == 0 else None
-dict_2gram_sorted = sorted(
-    dict_2gram.items(), key=lambda d: d[1], reverse=True)
+# Given a dictionary, evaluate the co-occurence relationship between top 148 most frequently used words
+used_words = [x[0] for x in dict_sorted[0:147]]
+G = nx.Graph()
+G.nodes()
+for x in used_words:
+    for y in used_words:
+        G.add_edge(x, y, weight=0) if y != x else None
 
-filename_2gram = './output/2grams.txt'
-with open(filename_seasons, 'w') as f:
-    f.write("二字词\t词频=出现次数*100/总字数")
-    for i in range(len(dict_2gram_sorted)):
-        f.write(
-            "\n"+"".join(dict_2gram_sorted[i][0])+"\t"+str(dict_2gram_sorted[i][1]))
+for x in regular_poems:
+    y = x.split('\n')
+    for z in y:
+        for w in used_words:
+            if

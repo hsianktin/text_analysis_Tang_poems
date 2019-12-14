@@ -23,7 +23,7 @@ regular_title = []
 corpus = []
 N = 500  # total number of samples
 stopwords = re.compile(
-    u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|-|（|）|[0-9]')
+    '而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|[\u002d|\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]|[0-9]|[a-zA-Z]')  # stopwords correction Chinese marks -> unicode string
 for poem in poems:
     tmp_poem = poem.strip('\n\u3000\u3000◎')
     tmp_poem = tmp_poem.replace('\u3000\u3000', '').split('\n')
