@@ -1,6 +1,6 @@
 # file import
 import sys
-import tensorflow as tf  # specifically, please use tensorflow 1.x
+import tensorflow as tf  # **specifically, please use tensorflow 1.x**
 from collections import defaultdict
 import seaborn as sns
 import pandas as pd
@@ -35,7 +35,6 @@ for poem in poems:
     # Word frequency
 
 
-# corpus=corpus
 corpus = corpus[0:N]
 # develop based on this part
 # create a vocabulary
@@ -76,26 +75,28 @@ y_train = []
 for data_word in data:
     x_train.append(unit_vectorization(word2int[data_word[0]], vocab_size))
 # convert to nparray
-x_train = np.asarray(x_train, dtype=np.int16)
+x_train = np.asarray(x_train)  # , dtype=np.int16)
+# x and y are initialized separately to save memory
 for data_word in data:
     y_train.append(unit_vectorization(word2int[data_word[1]], vocab_size))
-y_train = np.asarray(y_train, dtype=np.int16)
+y_train = np.asarray(y_train)  # , dtype=np.int16)
 
 # make the tensorflow model
-x = tf.placeholder(tf.float32, [None, vocab_size])
-y_label = tf.placeholder(tf.float32, shape=(None, vocab_size))
+x = tf.placeholder(tf.float32, [None, vocab_size], name="x")
+y_label = tf.placeholder(tf.float32, shape=(None, vocab_size), name="y_label")
 
 EMBEDDING_DIM = 4
-W1 = tf.Variable(tf.random_normal([vocab_size, EMBEDDING_DIM]))
+W1 = tf.Variable(tf.random_normal([vocab_size, EMBEDDING_DIM]), name="W1")
 # noise ### this line claims a variable of tf type which is essentially a 1x5 matrix
-b1 = tf.Variable(tf.random_normal([EMBEDDING_DIM]))
+b1 = tf.Variable(tf.random_normal([EMBEDDING_DIM]), name="b1")
 hidden_representation = tf.add(tf.matmul(x, W1), b1)
-W2 = tf.Variable(tf.random_normal([EMBEDDING_DIM, vocab_size]))
-b2 = tf.Variable(tf.random_normal([vocab_size]))
+W2 = tf.Variable(tf.random_normal([EMBEDDING_DIM, vocab_size]), name="W2")
+b2 = tf.Variable(tf.random_normal([vocab_size]), name="b2")
 prediction = tf.nn.softmax(tf.add(tf.matmul(hidden_representation, W2), b2))
 sess = tf.Session()
 init = tf.global_variables_initializer()
 sess.run(init)  # make sure you do this!
+print('Preparation Done')
 # define the loss function:
 cross_entropy_loss = tf.reduce_mean(-tf.reduce_sum(
     y_label * tf.log(prediction), reduction_indices=[1]))
@@ -106,7 +107,7 @@ print('Start calculating')
 # train for n_iter iterations
 n_iters = 10000
 saver = tf.train.Saver()
-checkpoint_path = "/content/drive/My Drive/Colab Notebooks/cp.ckpt"
+checkpoint_path = "/W2VMODEL/cp.ckpt"
 count = 0
 for _ in range(n_iters):
     count += 1
@@ -165,10 +166,12 @@ def word_sim(word, top_n):
 filename_w2v = './output/w2v_matrix.txt'
 with open(filename_w2v, 'w') as f:
     f.write("字\t对应向量\t训练样本数"+str(N))
-    for x in w2v.word_list:
-        f.write("\n"+x+"\t"+str(word_vec(x)))
+    for mu in words:
+        f.write("\n"+x+"\t"+str(word_vec(mu)))
 filename_w2v_sample = "./output/w2v_sample.txt"
 sample = ['思', '悲', '忧', '愁', '怒', '惧', '乐']
 with open(filename_w2v_sample, 'w') as f:
-    for x in sample:
-        f.write(x+": " + "、".join([y[0] for y in word_sim(x, 7)]))
+    for mu in sample:
+        f.write(mu+": " + "、".join([y[0] for y in word_sim(mu, 7)]))
+
+print('Files are saved')

@@ -1,6 +1,7 @@
 # file import
 import matplotlib.pyplot as plt
 import nltk
+import numpy as np
 import re
 import networkx as nx
 file = open("Tang_poems_utf_8.txt")
@@ -11,7 +12,7 @@ file.close()
 # This is the font specified. I'm using Ubuntu, so I downloaded a free Chinese font to allow for matplotlib showing Chinese characters.
 plt.rcParams['font.sans-serif'] = ['Taipei Sans TC Beta']
 pattern = u'卷.[0-9]+'
-poems = re.split(pattern, text)[1:1000]
+poems = re.split(pattern, text)[1:]
 regular_poems = []
 regular_title = []
 for poem in poems:
@@ -47,11 +48,35 @@ used_words = [x[0] for x in dict_sorted[0:147]]
 G = nx.Graph()
 G.nodes()
 for x in used_words:
-    for y in used_words:
+    for y in set(used_words)-set([x]):
         G.add_edge(x, y, weight=0) if y != x else None
-
+count = 0
 for x in regular_poems:
-    y = x.split('\n')
-    for z in y:
-        for w in used_words:
-            if
+    y = stopwords.sub('', x)
+    count += 1
+    tmp_set = set(list(y))
+    for w in used_words:
+        for u in set(used_words)-set([w]):
+            if set([u, w]).issubset(tmp_set):
+                G[w][u]['weight'] = G[w][u]['weight'] + 1
+centrality = nx.betweenness_centrality(G, k=None, normalized=True,
+                                       weight='weight', endpoints=True, seed=None)
+weighted_centrality_sorted = sorted(
+    centrality.items(), key=lambda x: x[1], reverse=True)
+nodelist = [x[0] for x in weighted_centrality_sorted]
+print(nodelist)
+print(weighted_centrality_sorted)
+nodelabels = {}
+count = 0
+for x in nodelist:
+    count += 1
+    nodelabels[x] = x if count < 20 else ''
+weight_list = [x[1] for x in weighted_centrality_sorted]
+size_list = [x/np.mean(weight_list)*50 for x in weight_list]
+print(size_list)
+centrality_layout = nx.kamada_kawai_layout(
+    G, dist=None, pos=None, weight='weight', scale=1, center=None, dim=2)
+
+nx.draw_spring(G, labels=nodelabels, nodelist=nodelist,
+               node_size=size_list, linewidth=0.1, font_color='w', edge_color='k')
+plt.savefig('./output/network.png')

@@ -11,4 +11,5 @@ There are two obstacles. First, initialize a large matrix is memory-expensive. I
 
 ## Known Issues
 [ ] Network analysis is lost.
+
 [ ] Word to vector mapping is far from ideal.

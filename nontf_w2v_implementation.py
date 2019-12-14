@@ -209,38 +209,37 @@ N = 100  # total number of samples
 # stopwords correction Chinese marks -> unicode string
 stopwords = re.compile(
     '而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|[\u002d|\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]|[0-9]|[a-zA-Z]')
-)
 for poem in poems:
-    tmp_poem=poem.strip('\n\u3000\u3000◎')
-    tmp_poem=tmp_poem.replace('\u3000\u3000', '').split('\n')
+    tmp_poem = poem.strip('\n\u3000\u3000◎')
+    tmp_poem = tmp_poem.replace('\u3000\u3000', '').split('\n')
     regular_title.append(tmp_poem[0])
     regular_poems.append('\n'.join(tmp_poem[1:]))
-    tmp_poem=''.join(tmp_poem[1:]).replace('\n', "").replace('。', '').replace('，', '').replace(
+    tmp_poem = ''.join(tmp_poem[1:]).replace('\n', "").replace('。', '').replace('，', '').replace(
         '：', '').replace('；', '').replace('？', '').replace('！', '').replace('（[.*]*?）', '')
     corpus.append(list(stopwords.sub('', tmp_poem)))
     # Word frequency
 
-settings={}
-settings['n']=7                   # dimension of word embeddings
-settings['window_size']=2         # context window +/- center word
-settings['min_count']=0           # minimum word count
-settings['epochs']=5000           # number of training epochs
+settings = {}
+settings['n'] = 7                   # dimension of word embeddings
+settings['window_size'] = 2         # context window +/- center word
+settings['min_count'] = 0           # minimum word count
+settings['epochs'] = 5000           # number of training epochs
 # number of negative words to use during training
-settings['neg_samp']=10
-settings['learning_rate']=0.01    # learning rate
+settings['neg_samp'] = 10
+settings['learning_rate'] = 0.01    # learning rate
 np.random.seed(0)                   # set the seed for reproducibility
-w2v=word2vec()
+w2v = word2vec()
 # corpus=corpus
-corpus=corpus[0:N]
-training_data=w2v.generate_training_data(settings, corpus)
+corpus = corpus[0:N]
+training_data = w2v.generate_training_data(settings, corpus)
 w2v.train(training_data)
-filename_w2v='./output/w2v_matrix.txt'
+filename_w2v = './output/w2v_matrix.txt'
 with open(filename_w2v, 'w') as f:
     f.write("字\t对应向量\t训练样本数"+str(N))
     for x in w2v.words_list:
         f.write("\n"+x+"\t"+str(w2v.word_vec(x)))
-filename_w2v_sample="./output/w2v_sample.txt"
-sample=['思', '悲', '忧', '愁', '怒', '惧', '乐']
+filename_w2v_sample = "./output/w2v_sample.txt"
+sample = ['思', '悲', '忧', '愁', '怒', '惧', '乐']
 with open(filename_w2v_sample, 'w') as f:
     for x in sample:
         f.write(x+": " + "、".join([y[0] for y in w2v.word_sim(x, 7)]))
