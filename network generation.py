@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import nltk
 import numpy as np
+import string
 import re
 import networkx as nx
 file = open("Tang_poems_utf_8.txt")

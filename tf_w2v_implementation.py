@@ -4,6 +4,8 @@ import tensorflow as tf  # **specifically, please use tensorflow 1.x**
 from collections import defaultdict
 import seaborn as sns
 import pandas as pd
+import string
+
 import time
 import csv
 import os
