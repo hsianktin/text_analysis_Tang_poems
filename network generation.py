@@ -95,20 +95,23 @@ centrality = nx.betweenness_centrality(G, k=None, normalized=True,
 for x in G.nodes():
     G.nodes[x]['weight'] = centrality[x]
 for x, y in G.edges():
-    G[x][y]['central'] = G.nodes[x]['weight'] + G.nodes[y]['weight']
+    G[x][y]['central'] = G.nodes[x]['weight'] + \
+        G.nodes[y]['weight'] + G[x][y]['weight']/100000
 weighted_centrality_sorted = sorted(
     centrality.items(), key=lambda x: x[1], reverse=True)
 nodelist = [x[0] for x in weighted_centrality_sorted]
 nodelabels = {}
-count = 0
-for x in nodelist:
-    count += 1
-    nodelabels[x] = x if count < 20 else ''
+
 weight_list = [x[1] for x in weighted_centrality_sorted]
+
 size_list = [((x/np.mean(weight_list)))**2*10 for x in weight_list]
+count = 0
+for i in range(len(size_list)):
+    x = nodelist[i]
+    nodelabels[x] = x if size_list[i] > 20 else ''
 centrality_layout = nx.kamada_kawai_layout(
     G, pos=None, weight='central', scale=5, center=None, dim=2)
 
-nx.draw(G, pos=centrality_layout, labels=nodelabels, nodelist=nodelist,
-        node_size=size_list, linewidth=0.01, font_color='w', edge_color='k')
+nx.draw_networkx(G, pos=centrality_layout, labels=nodelabels, nodelist=nodelist, style='dashed',
+                 node_size=size_list, linewidth=0.01, font_color='w', edge_color='y')
 plt.savefig('./output/network.png')
