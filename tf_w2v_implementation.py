@@ -19,7 +19,7 @@ file.close()
 # split and create regular poems
 
 pattern = u'卷.[0-9]+'
-poems = re.split(pattern, text)[1:]
+poems = re.split(pattern, text)[1:-1]
 regular_poems = []
 regular_title = []
 corpus = []
@@ -31,7 +31,7 @@ chinese_punc = u'！|？|｡|。|＂|＃|＄|％|＆|＇|（|）|＊|＋|，|－
     〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'
 other_non_cn = u'[0-9a-zA-Z]|\n'
 exclude = set(string.punctuation)
-stopwords = u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因'
+stopwords = u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三'
 re_auxiliary_words = re.compile(
     "|".join([chinese_punc, other_non_cn, stopwords]))
 

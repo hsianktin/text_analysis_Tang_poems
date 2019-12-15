@@ -202,7 +202,7 @@ class word2vec():
 
 
 pattern = u'卷.[0-9]+'
-poems = re.split(pattern, text)[1:]
+poems = re.split(pattern, text)[1:-1]
 regular_poems = []
 regular_title = []
 corpus = []

@@ -10,7 +10,7 @@ file.close()
 
 # split and create regular poems
 pattern = u'卷.[0-9]+'
-poems = re.split(pattern, text)[1:]
+poems = re.split(pattern, text)[1:-1]
 regular_poems = []
 regular_title = []
 for poem in poems:
@@ -19,6 +19,7 @@ for poem in poems:
     regular_title.append(tmp_poem[0])
     regular_poems.append('\n'.join(tmp_poem[1:]))
 # Word frequency
+# regular_poems[-1] = regular_poems[-1].replace('（《全唐诗》完）', '')
 data = ("".join(regular_poems))
 
 # remove Chinese punctuations
@@ -44,8 +45,8 @@ with open(filename, 'w', encoding='utf8') as f:
     f.write("Tang_poems_utf_8.txt中包含的所有字")
     f.write("\n"+data0)
 f.close()
-
-stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因')
+stopwords = re.compile(
+    u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三')
 # data = stopwords.sub('', data)[0:4000]  # sample calculation; reduced size
 data1 = stopwords.sub('', data0)
 filename = './output/word_all_wo_stopwords.txt'
@@ -92,7 +93,7 @@ f.close()
 # Word of 2 characters
 print("Analyzing word of 2 characters frequency")
 ct_ngrams = list(nltk.bigrams(data))
-data_2gram = list(ct_ngrams)
+data_2gram = ct_ngrams[:]
 ngram_list = set(data_2gram)
 dict_2gram = {}
 N = len(data_2gram)
