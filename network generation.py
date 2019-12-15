@@ -15,18 +15,27 @@ pattern = u'卷.[0-9]+'
 poems = re.split(pattern, text)[1:]
 regular_poems = []
 regular_title = []
+# Exclude Non chinese_characters
+chinese_punc = u'！|？|｡|。|＂|＃|＄|％|＆|＇|（|）|＊|＋|，|－|／|：|；|＜|＝|＞|\
+    ＠|［|＼|］|＾|＿|｀|｛|｜|｝|～|｟|｠|｢|｣|､|、|〃|》|「|」|『|』|【|】|〔|〕|〖|\
+    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'
+other_non_cn = u'[0-9a-zA-Z]|\n'
+exclude = set(string.punctuation)
+stopwords = u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因'
+re_auxiliary_words = re.compile(
+    "|".join([chinese_punc, other_non_cn, stopwords]))
+
 for poem in poems:
     tmp_poem = poem.strip('\n\u3000\u3000◎')
     tmp_poem = tmp_poem.replace('\u3000\u3000', '').split('\n')
     regular_title.append(tmp_poem[0])
     regular_poems.append('\n'.join(tmp_poem[1:]))
 # Word frequency
-data = ("".join(regular_poems)).replace('\n', "").replace('。', '').replace('，', '').replace(
-    '：', '').replace('；', '').replace('？', '').replace('！', '')
+data = "".join(regular_poems)
 stopwords = re.compile(
     '而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|[\u002d|\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]|[0-9]|[a-zA-Z]')  # stopwords correction Chinese marks -> unicode string
 # only w2v calculation need truncation; but it still requires time to run
-data = stopwords.sub('', data)
+data = re_auxiliary_words.sub('', data)
 data = list(data)
 wordlist = set(data)
 dict = {}
@@ -71,9 +80,9 @@ for x in nodelist:
     count += 1
     nodelabels[x] = x if count < 20 else ''
 weight_list = [x[1] for x in weighted_centrality_sorted]
-size_list = [(x/np.mean(weight_list))**2*50 for x in weight_list]
+size_list = [((x/np.mean(weight_list))*20)**2 for x in weight_list]
 centrality_layout = nx.spring_layout(
-    G, dist=None, pos=None, weight='weight', scale=1, center=None, dim=2)
+    G, pos=None, weight='weight', scale=1, center=None, dim=2)
 
 nx.draw(G, pos=centrality_layout, labels=nodelabels, nodelist=nodelist,
         node_size=size_list, linewidth=0.1, font_color='w', edge_color='k')
