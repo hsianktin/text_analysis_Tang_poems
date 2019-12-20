@@ -1,0 +1,94 @@
+.
+./Correlation.csv
+./Correlation.png
+./Hongfei Yan
+./Hongfei Yan/QT_2grams_wordcloud.py
+./Hongfei Yan/QT_wordcloud.py
+./Hongfei Yan/network generation.v0.1.py
+./Import and frequency.py
+./LICENSE
+./Quan Tangshi_CaoYin.txt
+./Sentimental_Analysis_LSTM_Conv1D
+./Sentimental_Analysis_LSTM_Conv1D/Figure_1.png
+./Sentimental_Analysis_LSTM_Conv1D/README.md
+./Sentimental_Analysis_LSTM_Conv1D/clothing.csv
+./Sentimental_Analysis_LSTM_Conv1D/main.py
+./Sentimental_Analysis_LSTM_Conv1D/text_emotion_twitter.csv
+./Sentimental_Analysis_LSTM_Conv1D/train_emoji.csv
+./Tang_poems_utf_8.txt
+./__pycache__
+./__pycache__/word2vec.cpython-36.pyc
+./colab_calc
+./colab_calc/w2v.ipynb
+./colab_calc/w2v_matrix.txt
+./colab_calc/w2v_sample.txt
+./coverage
+./network generation.py
+./network.png
+./nontf_w2v_implementation.py
+./ntw.ipynb
+./output
+./output/2grams.txt
+./output/network.png
+./output/seasons.txt
+./output/word_all.txt
+./output/word_all_wo_stopwords.txt
+./output/word_frequency.txt
+./output/word_network.html
+./readme.md
+./stopwords
+./tf_w2v_implementation.py
+./tree.txt
+./word_network.html
+./word_network_kawada_layout.html
+./word_network_spring_layout.html
+./wordnetwork.py
+
+6 directories, 38 files
+.
+├── Correlation.csv
+├── Correlation.png
+├── Hongfei Yan
+│   ├── QT_2grams_wordcloud.py
+│   ├── QT_wordcloud.py
+│   └── network generation.v0.1.py
+├── Import and frequency.py
+├── LICENSE
+├── Quan Tangshi_CaoYin.txt
+├── Sentimental_Analysis_LSTM_Conv1D
+│   ├── Figure_1.png
+│   ├── README.md
+│   ├── clothing.csv
+│   ├── main.py
+│   ├── text_emotion_twitter.csv
+│   └── train_emoji.csv
+├── Tang_poems_utf_8.txt
+├── __pycache__
+│   └── word2vec.cpython-36.pyc
+├── colab_calc
+│   ├── w2v.ipynb
+│   ├── w2v_matrix.txt
+│   └── w2v_sample.txt
+├── coverage
+├── network generation.py
+├── network.png
+├── nontf_w2v_implementation.py
+├── ntw.ipynb
+├── output
+│   ├── 2grams.txt
+│   ├── network.png
+│   ├── seasons.txt
+│   ├── word_all.txt
+│   ├── word_all_wo_stopwords.txt
+│   ├── word_frequency.txt
+│   └── word_network.html
+├── readme.md
+├── stopwords
+├── tf_w2v_implementation.py
+├── tree.txt
+├── word_network.html
+├── word_network_kawada_layout.html
+├── word_network_spring_layout.html
+└── wordnetwork.py
+
+6 directories, 38 files

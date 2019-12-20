@@ -22,7 +22,7 @@ regular_title = []
 # Exclude Non chinese_characters
 chinese_punc = u'！|？|｡|。|＂|＃|＄|％|＆|＇|（|）|＊|＋|，|－|／|：|；|＜|＝|＞|\
     ＠|［|＼|］|＾|＿|｀|｛|｜|｝|～|｟|｠|｢|｣|､|、|〃|》|「|」|『|』|【|】|〔|〕|〖|\
-    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'
+    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□|-'
 other_non_cn = u'[0-9a-zA-Z]|\n'
 exclude = set(string.punctuation)
 stopwords = u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三'
@@ -55,7 +55,7 @@ pool.join()
 dict_sorted = sorted(word_dict.items(), key=lambda d: d[1], reverse=True)
 print('Finished sorting')
 # Given a dictionary, evaluate the co-occurence relationship between top 148 most frequently used words
-used_words = [x[0] for x in dict_sorted[0:148]]
+used_words = [x[0] for x in dict_sorted[0:200] if x != '一']
 G = nx.Graph()
 G.nodes()
 for x in used_words:
@@ -104,7 +104,7 @@ nodelabels = {}
 
 weight_list = [x[1] for x in weighted_centrality_sorted]
 
-size_list = [((x/np.mean(weight_list)))**2*10 for x in weight_list]
+size_list = [((x/np.mean(weight_list)))*100 for x in weight_list]
 count = 0
 for i in range(len(size_list)):
     x = nodelist[i]
@@ -113,5 +113,7 @@ centrality_layout = nx.kamada_kawai_layout(
     G, pos=None, weight='central', scale=5, center=None, dim=2)
 
 nx.draw_networkx(G, pos=centrality_layout, labels=nodelabels, nodelist=nodelist, style='dashed',
-                 node_size=size_list, linewidth=0.01, font_color='w', edge_color='y')
+                 node_size=size_list, linewidth=0.01, font_color='w', edge_color='y', font_size=8)
 plt.savefig('./output/network.png')
+
+# Alternative way to plot the network
