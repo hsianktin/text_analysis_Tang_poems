@@ -1,0 +1,475 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Correlation	../.ipynb_checkpoints/tmp-checkpoint.py	/^Correlation = pd.read_csv("Correlation.csv", index_col=0)$/;"	kind:variable	line:322
+EMBEDDING_DIM	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^EMBEDDING_DIM=50$/;"	kind:variable	line:29
+EMBEDDING_DIM	../tf_w2v_implementation.py	/^EMBEDDING_DIM = 4$/;"	kind:variable	line:98
+G	../.ipynb_checkpoints/tmp-checkpoint.py	/^G = nx.Graph()$/;"	kind:variable	line:265
+G	../Hongfei Yan/network generation.v0.1.py	/^G = nx.Graph()$/;"	kind:variable	line:35
+G	../network generation.py	/^G = nx.Graph()$/;"	kind:variable	line:59
+G	../wordnetwork.py	/^G = nx.Graph()$/;"	kind:variable	line:73
+Import and frequency.py	../Import and frequency.py	1;"	kind:file	line:1
+MAX_SEQUENCE_LENGTH	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^MAX_SEQUENCE_LENGTH=20$/;"	kind:variable	line:28
+N	../.ipynb_checkpoints/process-checkpoint.py	/^N = len(ngram_list)$/;"	kind:variable	line:49
+N	../.ipynb_checkpoints/process-checkpoint.py	/^N = len(wordlist)$/;"	kind:variable	line:25
+N	../.ipynb_checkpoints/tmp-checkpoint.py	/^N = len(data)$/;"	kind:variable	line:273
+N	../.ipynb_checkpoints/tmp-checkpoint.py	/^N = len(wordlist)$/;"	kind:variable	line:220
+N	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^N = 100 # total number of samples$/;"	kind:variable	line:205
+N	../Import and frequency.py	/^N = len(data)$/;"	kind:variable	line:63
+N	../Import and frequency.py	/^N = len(data_2gram)$/;"	kind:variable	line:99
+N	../network generation.py	/^N = len(data)$/;"	kind:variable	line:43
+N	../nontf_w2v_implementation.py	/^N = 100  # total number of samples$/;"	kind:variable	line:209
+N	../tf_w2v_implementation.py	/^N = 500  # total number of samples$/;"	kind:variable	line:26
+N	../wordnetwork.py	/^N = len(data)$/;"	kind:variable	line:57
+QT_2grams_wordcloud.py	../Hongfei Yan/QT_2grams_wordcloud.py	1;"	kind:file	line:1
+QT_wordcloud.py	../Hongfei Yan/QT_wordcloud.py	1;"	kind:file	line:1
+W1	../tf_w2v_implementation.py	/^W1 = tf.Variable(tf.random_normal([vocab_size, EMBEDDING_DIM]), name="W1")$/;"	kind:variable	line:99
+W2	../tf_w2v_implementation.py	/^W2 = tf.Variable(tf.random_normal([EMBEDDING_DIM, vocab_size]), name="W2")$/;"	kind:variable	line:103
+WINDOW_SIZE	../tf_w2v_implementation.py	/^WINDOW_SIZE = 2$/;"	kind:variable	line:67
+__init__	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def __init__ (self):$/;"	kind:member	line:36
+__init__	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def __init__ (self):$/;"	kind:member	line:36
+__init__	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def __init__ (self):$/;"	kind:member	line:20
+__init__	../nontf_w2v_implementation.py	/^    def __init__(self):$/;"	kind:member	line:34
+annotations	../wordnetwork.py	/^                annotations=[dict($/;"	kind:variable	line:197
+b1	../tf_w2v_implementation.py	/^b1 = tf.Variable(tf.random_normal([EMBEDDING_DIM]), name="b1")$/;"	kind:variable	line:101
+b2	../tf_w2v_implementation.py	/^b2 = tf.Variable(tf.random_normal([vocab_size]), name="b2")$/;"	kind:variable	line:104
+backprop	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def backprop(self, e, h, x):$/;"	kind:member	line:103
+backprop	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def backprop(self, e, h, x):$/;"	kind:member	line:103
+backprop	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def backprop(self, e, h, x):$/;"	kind:member	line:87
+backprop	../nontf_w2v_implementation.py	/^    def backprop(self, e, h, x):$/;"	kind:member	line:102
+base_filters	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^base_filters='\\n\\t!"#$%&()*+,-.\/:;<=>?[\\]^_`{|}~ '$/;"	kind:variable	line:71
+batch_size	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^batch_size = 64$/;"	kind:variable	line:170
+callbacks_list	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^callbacks_list = [checkpoint]$/;"	kind:variable	line:180
+centrality	../Hongfei Yan/network generation.v0.1.py	/^centrality = nx.betweenness_centrality(G, k=None, normalized=True,$/;"	kind:variable	line:65
+centrality	../network generation.py	/^centrality = nx.betweenness_centrality(G, k=None, normalized=True,$/;"	kind:variable	line:93
+centrality	../wordnetwork.py	/^centrality = nx.betweenness_centrality(G, k=None, normalized=True,$/;"	kind:variable	line:106
+centrality_layout	../Hongfei Yan/network generation.v0.1.py	/^centrality_layout = nx.spring_layout($/;"	kind:variable	line:88
+centrality_layout	../network generation.py	/^centrality_layout = nx.kamada_kawai_layout($/;"	kind:variable	line:112
+centrality_layout	../wordnetwork.py	/^centrality_layout = nx.kamada_kawai_layout($/;"	kind:variable	line:124
+checkpoint	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')$/;"	kind:variable	line:179
+checkpoint_path	../tf_w2v_implementation.py	/^checkpoint_path = "\/W2VMODEL\/cp.ckpt"$/;"	kind:variable	line:120
+chinese_punc	../Import and frequency.py	/^    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'$/;"	kind:variable	line:28
+chinese_punc	../network generation.py	/^    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□|-'$/;"	kind:variable	line:25
+chinese_punc	../nontf_w2v_implementation.py	/^    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'$/;"	kind:variable	line:213
+chinese_punc	../tf_w2v_implementation.py	/^    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□'$/;"	kind:variable	line:31
+chinese_punc	../wordnetwork.py	/^chinese_punc = u'！|？|｡|。|＂|＃|＄|％|＆|＇|（|）|＊|＋|，|－|／|：|；|＜|＝|＞|    ＠|［|＼|］|＾|＿|｀|｛|｜|｝|～|｟|｠|｢|｣|､|、|〃|》|「|」|『|』|【|】|〔|〕|〖|    〗|〘|〙|〚|〛|〜|〝|〞|〟|〰|〾|〿|–|—|‘|’|‛|“|”|„|‟|…|‧|﹏||《|□|-'$/;"	kind:variable	line:39
+chinese_punc_re	../Import and frequency.py	/^chinese_punc_re = re.compile(chinese_punc)$/;"	kind:variable	line:29
+coefs	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^    coefs = np.asarray(values[1:], dtype='float32')$/;"	kind:variable	line:113
+color	../wordnetwork.py	/^        color=[],$/;"	kind:variable	line:166
+colorbar	../wordnetwork.py	/^        colorbar=dict($/;"	kind:variable	line:168
+colorscale	../wordnetwork.py	/^        colorscale='YlGnBu',$/;"	kind:variable	line:164
+corpus	../.ipynb_checkpoints/tmp-checkpoint.py	/^corpus = []$/;"	kind:variable	line:204
+corpus	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^corpus = []$/;"	kind:variable	line:204
+corpus	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^corpus = corpus[0:N]$/;"	kind:variable	line:226
+corpus	../nontf_w2v_implementation.py	/^corpus = []$/;"	kind:variable	line:208
+corpus	../nontf_w2v_implementation.py	/^corpus = corpus[0:N]$/;"	kind:variable	line:241
+corpus	../tf_w2v_implementation.py	/^corpus = []$/;"	kind:variable	line:25
+corpus	../tf_w2v_implementation.py	/^corpus = corpus[0:N]$/;"	kind:variable	line:48
+count	../Hongfei Yan/network generation.v0.1.py	/^count = 0$/;"	kind:variable	line:40
+count	../Hongfei Yan/network generation.v0.1.py	/^count = 0$/;"	kind:variable	line:72
+count	../network generation.py	/^count = 0$/;"	kind:variable	line:108
+count	../network generation.py	/^count = 0$/;"	kind:variable	line:64
+count	../tf_w2v_implementation.py	/^count = 0$/;"	kind:variable	line:121
+count	../wordnetwork.py	/^count = 0$/;"	kind:variable	line:78
+cross_entropy_loss	../tf_w2v_implementation.py	/^cross_entropy_loss = tf.reduce_mean(-tf.reduce_sum($/;"	kind:variable	line:111
+ct_ngrams	../.ipynb_checkpoints/process-checkpoint.py	/^ct_ngrams = list(nltk.bigrams(data))$/;"	kind:variable	line:44
+ct_ngrams	../Import and frequency.py	/^ct_ngrams = list(nltk.bigrams(data))$/;"	kind:variable	line:95
+data	../.ipynb_checkpoints/process-checkpoint.py	/^data = ("".join(regular_poems)).replace('\\n',"").replace('。','').replace('，','').replace('：','').replace('；','').replace('？','').replace('！','').replace('（[.*]*?）','')$/;"	kind:variable	line:18
+data	../.ipynb_checkpoints/process-checkpoint.py	/^data = list(data)$/;"	kind:variable	line:21
+data	../.ipynb_checkpoints/process-checkpoint.py	/^data = stopwords.sub('',data)$/;"	kind:variable	line:20
+data	../.ipynb_checkpoints/tmp-checkpoint.py	/^data = ("".join(regular_poems)).replace('\\n',"").replace('。','').replace('，','').replace('：','').replace('；','').replace('？','').replace('！','').replace('（[.*]*?）','')$/;"	kind:variable	line:214
+data	../.ipynb_checkpoints/tmp-checkpoint.py	/^data = list(data)$/;"	kind:variable	line:216
+data	../.ipynb_checkpoints/tmp-checkpoint.py	/^data = stopwords.sub('',data) # sample calculation; reduced size$/;"	kind:variable	line:215
+data	../Import and frequency.py	/^data = ''.join(ch for ch in data if ch not in exclude)$/;"	kind:variable	line:35
+data	../Import and frequency.py	/^data = ("".join(regular_poems))$/;"	kind:variable	line:23
+data	../Import and frequency.py	/^data = chinese_punc_re.sub("", data)$/;"	kind:variable	line:30
+data	../Import and frequency.py	/^data = data1[:]$/;"	kind:variable	line:58
+data	../Import and frequency.py	/^data = list(data)$/;"	kind:variable	line:59
+data	../network generation.py	/^data = "".join(regular_poems)$/;"	kind:variable	line:38
+data	../network generation.py	/^data = list(re_auxiliary_words.sub('', data))$/;"	kind:variable	line:39
+data	../tf_w2v_implementation.py	/^data = []$/;"	kind:variable	line:65
+data	../wordnetwork.py	/^data = "".join(regular_poems)$/;"	kind:variable	line:52
+data	../wordnetwork.py	/^data = list(re_auxiliary_words.sub('', data))$/;"	kind:variable	line:53
+data0	../Import and frequency.py	/^data0 = other_non_cn_re.sub("", data)$/;"	kind:variable	line:40
+data1	../Import and frequency.py	/^data1 = stopwords.sub('', data0)$/;"	kind:variable	line:51
+dataFrame	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^dataFrame=pd.read_csv('text_emotion_twitter.csv', encoding='utf-8')$/;"	kind:variable	line:36
+data_2gram	../.ipynb_checkpoints/process-checkpoint.py	/^data_2gram = list(ct_ngrams)$/;"	kind:variable	line:45
+data_2gram	../Import and frequency.py	/^data_2gram = ct_ngrams[:]$/;"	kind:variable	line:96
+data_poem	../.ipynb_checkpoints/tmp-checkpoint.py	/^    data_poem = set(data[5*i:5*(i+1)])    ### regularization for data. data type of data_poem == string$/;"	kind:variable	line:275
+dict	../.ipynb_checkpoints/process-checkpoint.py	/^dict = {}$/;"	kind:variable	line:23
+dict_2gram	../.ipynb_checkpoints/process-checkpoint.py	/^dict_2gram = {}$/;"	kind:variable	line:47
+dict_2gram	../Import and frequency.py	/^dict_2gram = {el: 0 for el in ngram_list}$/;"	kind:variable	line:100
+dict_2gram	../Import and frequency.py	/^dict_2gram = {}$/;"	kind:variable	line:98
+dict_2gram_sorted	../.ipynb_checkpoints/process-checkpoint.py	/^dict_2gram_sorted = sorted(dict_2gram.items(), key=lambda d:d[1], reverse=True)$/;"	kind:variable	line:54
+dict_2gram_sorted	../Import and frequency.py	/^dict_2gram_sorted = sorted($/;"	kind:variable	line:112
+dict_sorted	../.ipynb_checkpoints/process-checkpoint.py	/^dict_sorted = sorted(dict.items(), key=lambda d:d[1], reverse=True)$/;"	kind:variable	line:30
+dict_sorted	../.ipynb_checkpoints/tmp-checkpoint.py	/^dict_sorted = sorted(diction.items(), key=lambda d:d[1], reverse=True)$/;"	kind:variable	line:226
+dict_sorted	../Hongfei Yan/network generation.v0.1.py	/^dict_sorted = list(words_df.keys())$/;"	kind:variable	line:29
+dict_sorted	../Import and frequency.py	/^dict_sorted = sorted(word_dict.items(), key=lambda d: d[1], reverse=True)$/;"	kind:variable	line:76
+dict_sorted	../network generation.py	/^dict_sorted = sorted(word_dict.items(), key=lambda d: d[1], reverse=True)$/;"	kind:variable	line:55
+dict_sorted	../wordnetwork.py	/^dict_sorted = sorted(word_dict.items(), key=lambda d: d[1], reverse=True)$/;"	kind:variable	line:69
+diction	../.ipynb_checkpoints/tmp-checkpoint.py	/^diction = {}$/;"	kind:variable	line:218
+edge_trace	../wordnetwork.py	/^edge_trace = go.Scatter($/;"	kind:variable	line:141
+edge_x	../wordnetwork.py	/^edge_x = []$/;"	kind:variable	line:129
+edge_y	../wordnetwork.py	/^edge_y = []$/;"	kind:variable	line:130
+embedding_layer	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^embedding_layer = Embedding(len(word_index) + 1,EMBEDDING_DIM, weights=[embedding_matrix],input_length=MAX_SEQUENCE_LENGTH,trainable=False)$/;"	kind:variable	line:132
+embedding_matrix	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^embedding_matrix = np.zeros((len(word_index) + 1, EMBEDDING_DIM))$/;"	kind:variable	line:121
+embedding_vector	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^    embedding_vector = embeddings_index.get(word)$/;"	kind:variable	line:123
+embeddings_index	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^embeddings_index = {}$/;"	kind:variable	line:108
+exclude	../Import and frequency.py	/^exclude = set(string.punctuation)$/;"	kind:variable	line:34
+exclude	../network generation.py	/^exclude = set(string.punctuation)$/;"	kind:variable	line:27
+exclude	../nontf_w2v_implementation.py	/^exclude = set(string.punctuation)$/;"	kind:variable	line:215
+exclude	../tf_w2v_implementation.py	/^exclude = set(string.punctuation)$/;"	kind:variable	line:33
+exclude	../wordnetwork.py	/^exclude = set(string.punctuation)$/;"	kind:variable	line:41
+f	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^f = open(os.path.join('', 'glove.6B.50d.txt'),'r',encoding="utf-8")$/;"	kind:variable	line:109
+fig	../wordnetwork.py	/^fig = go.Figure(data=[edge_trace, node_trace],$/;"	kind:variable	line:190
+file	../.ipynb_checkpoints/process-checkpoint.py	/^file = open("Tang_poems_utf_8.txt")$/;"	kind:variable	line:2
+file	../.ipynb_checkpoints/tmp-checkpoint.py	/^file = open("Tang_poems_utf_8.txt")$/;"	kind:variable	line:2
+file	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^file = open("Tang_poems_utf_8.txt")$/;"	kind:variable	line:2
+file	../Hongfei Yan/QT_2grams_wordcloud.py	/^file = open(filename, encoding='utf8')$/;"	kind:variable	line:18
+file	../Hongfei Yan/QT_wordcloud.py	/^file = open(filename, encoding='utf8')$/;"	kind:variable	line:18
+file	../Hongfei Yan/network generation.v0.1.py	/^file = open("Tang_poems_utf_8.txt",encoding='utf8')$/;"	kind:variable	line:7
+file	../Hongfei Yan/network generation.v0.1.py	/^file = open(filename, encoding='utf8')$/;"	kind:variable	line:16
+file	../Hongfei Yan/network generation.v0.1.py	/^file = open(filename, encoding='utf8')$/;"	kind:variable	line:44
+file	../Import and frequency.py	/^file = open("Tang_poems_utf_8.txt", encoding='utf8')$/;"	kind:variable	line:7
+file	../network generation.py	/^file = open("Tang_poems_utf_8.txt", encoding='utf8')$/;"	kind:variable	line:9
+file	../nontf_w2v_implementation.py	/^file = open("Tang_poems_utf_8.txt")$/;"	kind:variable	line:13
+file	../tf_w2v_implementation.py	/^file = open("Tang_poems_utf_8.txt")$/;"	kind:variable	line:16
+file	../wordnetwork.py	/^file = open("Tang_poems_utf_8.txt", encoding='utf8')$/;"	kind:variable	line:25
+filename	../Hongfei Yan/QT_2grams_wordcloud.py	/^filename = '.\/output\/2grams.txt'$/;"	kind:variable	line:17
+filename	../Hongfei Yan/QT_wordcloud.py	/^filename = '.\/output\/word_frequency.txt'$/;"	kind:variable	line:17
+filename	../Hongfei Yan/network generation.v0.1.py	/^filename = '.\/output\/regular_poems.txt'$/;"	kind:variable	line:43
+filename	../Hongfei Yan/network generation.v0.1.py	/^filename = '.\/output\/word_frequency.txt'$/;"	kind:variable	line:15
+filename	../Import and frequency.py	/^filename = '.\/output\/word_all.txt'$/;"	kind:variable	line:43
+filename	../Import and frequency.py	/^filename = '.\/output\/word_all_wo_stopwords.txt'$/;"	kind:variable	line:52
+filename_2gram	../.ipynb_checkpoints/process-checkpoint.py	/^filename_2gram = '.\/output\/2grams.txt'$/;"	kind:variable	line:56
+filename_2gram	../Import and frequency.py	/^filename_2gram = '.\/output\/2grams.txt'$/;"	kind:variable	line:115
+filename_seasons	../.ipynb_checkpoints/process-checkpoint.py	/^filename_seasons = '.\/output\/seasons.txt'$/;"	kind:variable	line:37
+filename_seasons	../Import and frequency.py	/^filename_seasons = '.\/output\/seasons.txt'$/;"	kind:variable	line:86
+filename_total	../.ipynb_checkpoints/process-checkpoint.py	/^filename_total = '.\/output\/word_frequency.txt'$/;"	kind:variable	line:31
+filename_total	../Import and frequency.py	/^filename_total = '.\/output\/word_frequency.txt'$/;"	kind:variable	line:77
+filename_w2v	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^filename_w2v = '.\/output\/w2v_matrix.txt'$/;"	kind:variable	line:229
+filename_w2v	../nontf_w2v_implementation.py	/^filename_w2v = '.\/output\/w2v_matrix.txt'$/;"	kind:variable	line:244
+filename_w2v	../tf_w2v_implementation.py	/^filename_w2v = '.\/output\/w2v_matrix.txt'$/;"	kind:variable	line:176
+filename_w2v_sample	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^filename_w2v_sample=".\/output\/w2v_sample.txt"$/;"	kind:variable	line:234
+filename_w2v_sample	../nontf_w2v_implementation.py	/^filename_w2v_sample = ".\/output\/w2v_sample.txt"$/;"	kind:variable	line:249
+filename_w2v_sample	../tf_w2v_implementation.py	/^filename_w2v_sample = ".\/output\/w2v_sample.txt"$/;"	kind:variable	line:181
+filepath	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^filepath="model_weights-improvement-{epoch:02d}-{val_acc:.6f}.hdf5"$/;"	kind:variable	line:178
+filtered_sentence	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^	filtered_sentence = [w for w in newlist if not w in stop_words] $/;"	kind:variable	line:82
+font	../Hongfei Yan/QT_2grams_wordcloud.py	/^font = "C:\\Windows\\Fonts\\STXINGKA.TTF"$/;"	kind:variable	line:6
+font	../Hongfei Yan/QT_wordcloud.py	/^font = "C:\\Windows\\Fonts\\STXINGKA.TTF"$/;"	kind:variable	line:6
+font_path	../Hongfei Yan/QT_2grams_wordcloud.py	/^               font_path=font,              #   解决显示口字型乱码问题，可进入C:\/Windows\/Fonts\/目录更换字体$/;"	kind:variable	line:12
+font_path	../Hongfei Yan/QT_wordcloud.py	/^               font_path=font,              #   解决显示口字型乱码问题，可进入C:\/Windows\/Fonts\/目录更换字体$/;"	kind:variable	line:12
+forward_pass	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def forward_pass(self, x):$/;"	kind:member	line:95
+forward_pass	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def forward_pass(self, x):$/;"	kind:member	line:95
+forward_pass	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def forward_pass(self, x):$/;"	kind:member	line:79
+forward_pass	../nontf_w2v_implementation.py	/^    def forward_pass(self, x):$/;"	kind:member	line:94
+generate_training_data	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def generate_training_data(self, settings, corpus):$/;"	kind:member	line:45
+generate_training_data	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def generate_training_data(self, settings, corpus):$/;"	kind:member	line:45
+generate_training_data	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def generate_training_data(self, settings, corpus):$/;"	kind:member	line:29
+generate_training_data	../nontf_w2v_implementation.py	/^    def generate_training_data(self, settings, corpus):$/;"	kind:member	line:42
+hidden_representation	../tf_w2v_implementation.py	/^hidden_representation = tf.add(tf.matmul(x, W1), b1)$/;"	kind:variable	line:102
+history	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^history=model.fit(x_train2, y_train2, validation_data=(x_valid, y_valid), batch_size=batch_size, epochs=num_epochs,callbacks=callbacks_list)$/;"	kind:variable	line:182
+hoverinfo	../wordnetwork.py	/^    hoverinfo='none',$/;"	kind:variable	line:144
+hoverinfo	../wordnetwork.py	/^    hoverinfo='text',$/;"	kind:variable	line:157
+hovermode	../wordnetwork.py	/^                hovermode='closest',$/;"	kind:variable	line:195
+i	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^	i=i.replace('\\'', '')$/;"	kind:variable	line:80
+i	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^	i=str(i)$/;"	kind:variable	line:77
+init	../tf_w2v_implementation.py	/^init = tf.global_variables_initializer()$/;"	kind:variable	line:107
+int2word	../tf_w2v_implementation.py	/^int2word = {}$/;"	kind:variable	line:58
+integer_encoded	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^integer_encoded = label_encoder.fit_transform(y)$/;"	kind:variable	line:140
+label_encoder	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^label_encoder = LabelEncoder()$/;"	kind:variable	line:139
+layout	../.ipynb_checkpoints/tmp-checkpoint.py	/^layout=nx.drawing.layout.kamada_kawai_layout(G, dist=None, pos=None, weight='centrality', scale=1, center=None, dim=2)$/;"	kind:variable	line:298
+layout	../wordnetwork.py	/^                layout=go.Layout($/;"	kind:variable	line:191
+le_name_mapping	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^le_name_mapping = dict(zip(label_encoder.transform(label_encoder.classes_),label_encoder.classes_))$/;"	kind:variable	line:141
+line	../wordnetwork.py	/^    line=dict(width=0.5, color='#888'),$/;"	kind:variable	line:143
+line_width	../wordnetwork.py	/^        line_width=2))$/;"	kind:variable	line:174
+main.py	../Sentimental_Analysis_LSTM_Conv1D/main.py	1;"	kind:file	line:1
+margin	../wordnetwork.py	/^                margin=dict(b=20, l=5, r=5, t=40),$/;"	kind:variable	line:196
+marker	../wordnetwork.py	/^    marker=dict($/;"	kind:variable	line:158
+max_font_size	../Hongfei Yan/QT_2grams_wordcloud.py	/^               max_font_size=80,            #   显示字体的最大值$/;"	kind:variable	line:10
+max_font_size	../Hongfei Yan/QT_wordcloud.py	/^               max_font_size=80,            #   显示字体的最大值$/;"	kind:variable	line:10
+max_words	../Hongfei Yan/QT_2grams_wordcloud.py	/^               max_words=400,               #   最大词数$/;"	kind:variable	line:8
+max_words	../Hongfei Yan/QT_wordcloud.py	/^               max_words=300,               #   最大词数$/;"	kind:variable	line:8
+miu	../Hongfei Yan/network generation.v0.1.py	/^miu = np.mean(weight_list)$/;"	kind:variable	line:83
+mode	../wordnetwork.py	/^    mode='lines')$/;"	kind:variable	line:145
+mode	../wordnetwork.py	/^    mode='markers',$/;"	kind:variable	line:156
+model	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^model=Sequential()$/;"	kind:variable	line:149
+n	../.ipynb_checkpoints/process-checkpoint.py	/^n = 0$/;"	kind:variable	line:24
+n	../.ipynb_checkpoints/process-checkpoint.py	/^n = 0$/;"	kind:variable	line:48
+n	../.ipynb_checkpoints/tmp-checkpoint.py	/^n = 0$/;"	kind:variable	line:219
+n	../Import and frequency.py	/^n = 0$/;"	kind:variable	line:62
+n	../network generation.py	/^n = 0$/;"	kind:variable	line:42
+n	../wordnetwork.py	/^n = 0$/;"	kind:variable	line:56
+n_iters	../tf_w2v_implementation.py	/^n_iters = 10000$/;"	kind:variable	line:118
+ncount	../tf_w2v_implementation.py	/^ncount = 0$/;"	kind:variable	line:66
+network generation.py	../network generation.py	1;"	kind:file	line:1
+network generation.v0.1.py	../Hongfei Yan/network generation.v0.1.py	1;"	kind:file	line:1
+new_stop_words	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^new_stop_words=set(stop_words)$/;"	kind:variable	line:32
+newlist	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^	newlist = [x for x in text_to_word_sequence(i,filters=base_filters, lower=True) if not x.startswith("@")]$/;"	kind:variable	line:81
+ngram_list	../.ipynb_checkpoints/process-checkpoint.py	/^ngram_list = set(data_2gram)$/;"	kind:variable	line:46
+ngram_list	../Import and frequency.py	/^ngram_list = set(data_2gram)$/;"	kind:variable	line:97
+node_bc	../wordnetwork.py	/^node_bc = []$/;"	kind:variable	line:179
+node_color	../Hongfei Yan/network generation.v0.1.py	/^node_color = [float(v) for v in weight_list]$/;"	kind:variable	line:94
+node_size	../Hongfei Yan/network generation.v0.1.py	/^        node_size=size_list, $/;"	kind:variable	line:97
+node_text	../wordnetwork.py	/^node_text = []$/;"	kind:variable	line:178
+node_trace	../wordnetwork.py	/^node_trace = go.Scatter($/;"	kind:variable	line:154
+node_x	../wordnetwork.py	/^node_x = []$/;"	kind:variable	line:147
+node_y	../wordnetwork.py	/^node_y = []$/;"	kind:variable	line:148
+nodelabels	../Hongfei Yan/network generation.v0.1.py	/^nodelabels = {}$/;"	kind:variable	line:71
+nodelabels	../network generation.py	/^nodelabels = {}$/;"	kind:variable	line:103
+nodelist	../.ipynb_checkpoints/tmp-checkpoint.py	/^nodelist=[]$/;"	kind:variable	line:289
+nodelist	../.ipynb_checkpoints/tmp-checkpoint.py	/^nodelist=nodelist$/;"	kind:variable	line:296
+nodelist	../.ipynb_checkpoints/tmp-checkpoint.py	/^nodelist=nodelist[1:10]$/;"	kind:variable	line:303
+nodelist	../Hongfei Yan/network generation.v0.1.py	/^nodelist = [x[0] for x in weighted_centrality_sorted]$/;"	kind:variable	line:69
+nodelist	../network generation.py	/^nodelist = [x[0] for x in weighted_centrality_sorted]$/;"	kind:variable	line:102
+nodelist	../wordnetwork.py	/^nodelist = [x[0] for x in weighted_centrality_sorted]$/;"	kind:variable	line:117
+nodename	../.ipynb_checkpoints/tmp-checkpoint.py	/^nodename={}$/;"	kind:variable	line:291
+nodesizes	../.ipynb_checkpoints/tmp-checkpoint.py	/^nodesizes = [(x\/np.mean(values))*30 for x in values] # increase contrast between large and small values; for small samples, I cannot see significant patters.$/;"	kind:variable	line:297
+nontf_w2v_implementation.py	../nontf_w2v_implementation.py	1;"	kind:file	line:1
+num_epochs	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^num_epochs = 100$/;"	kind:variable	line:171
+other_non_cn	../Import and frequency.py	/^other_non_cn = u'[0-9a-zA-Z]|\\n'$/;"	kind:variable	line:38
+other_non_cn	../network generation.py	/^other_non_cn = u'[0-9a-zA-Z]|\\n'$/;"	kind:variable	line:26
+other_non_cn	../nontf_w2v_implementation.py	/^other_non_cn = u'[0-9a-zA-Z]|\\n'$/;"	kind:variable	line:214
+other_non_cn	../tf_w2v_implementation.py	/^other_non_cn = u'[0-9a-zA-Z]|\\n'$/;"	kind:variable	line:32
+other_non_cn	../wordnetwork.py	/^other_non_cn = u'[0-9a-zA-Z]|\\n'$/;"	kind:variable	line:40
+other_non_cn_re	../Import and frequency.py	/^other_non_cn_re = re.compile(other_non_cn)$/;"	kind:variable	line:39
+outputMatrix	../.ipynb_checkpoints/tmp-checkpoint.py	/^def outputMatrix(name):$/;"	kind:function	line:304
+par_dict_2gram	../Import and frequency.py	/^def par_dict_2gram(word):$/;"	kind:function	line:103
+par_dict_word	../Import and frequency.py	/^def par_dict_word(word):$/;"	kind:function	line:66
+par_dict_word	../network generation.py	/^def par_dict_word(word):$/;"	kind:function	line:46
+par_dict_word	../wordnetwork.py	/^def par_dict_word(word):$/;"	kind:function	line:60
+par_poem_networks	../network generation.py	/^def par_poem_networks(poem):$/;"	kind:function	line:67
+par_poem_networks	../wordnetwork.py	/^def par_poem_networks(poem):$/;"	kind:function	line:81
+pattern	../.ipynb_checkpoints/process-checkpoint.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:8
+pattern	../.ipynb_checkpoints/tmp-checkpoint.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:200
+pattern	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:200
+pattern	../Import and frequency.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:12
+pattern	../network generation.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:17
+pattern	../nontf_w2v_implementation.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:204
+pattern	../tf_w2v_implementation.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:21
+pattern	../wordnetwork.py	/^pattern = u'卷.[0-9]+'$/;"	kind:variable	line:33
+poems	../.ipynb_checkpoints/process-checkpoint.py	/^poems = re.split(pattern, text)[1:]$/;"	kind:variable	line:9
+poems	../.ipynb_checkpoints/tmp-checkpoint.py	/^poems = re.split(pattern, text)[1:]$/;"	kind:variable	line:201
+poems	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^poems = re.split(pattern, text)[1:]$/;"	kind:variable	line:201
+poems	../Import and frequency.py	/^poems = re.split(pattern, text)[1:-1]$/;"	kind:variable	line:13
+poems	../network generation.py	/^poems = re.split(pattern, text)[1:-1]$/;"	kind:variable	line:18
+poems	../nontf_w2v_implementation.py	/^poems = re.split(pattern, text)[1:-1]$/;"	kind:variable	line:205
+poems	../tf_w2v_implementation.py	/^poems = re.split(pattern, text)[1:-1]$/;"	kind:variable	line:22
+poems	../wordnetwork.py	/^poems = re.split(pattern, text)[1:-1]$/;"	kind:variable	line:34
+pool	../Import and frequency.py	/^pool = ThreadPool()$/;"	kind:variable	line:107
+pool	../Import and frequency.py	/^pool = ThreadPool()$/;"	kind:variable	line:71
+pool	../network generation.py	/^pool = ThreadPool()$/;"	kind:variable	line:51
+pool	../network generation.py	/^pool = ThreadPool()$/;"	kind:variable	line:77
+pool	../wordnetwork.py	/^pool = ThreadPool()$/;"	kind:variable	line:65
+pool	../wordnetwork.py	/^pool = ThreadPool()$/;"	kind:variable	line:91
+prediction	../tf_w2v_implementation.py	/^prediction = tf.nn.softmax(tf.add(tf.matmul(hidden_representation, W2), b2))$/;"	kind:variable	line:105
+prefer_horizontal	../Hongfei Yan/QT_2grams_wordcloud.py	/^               prefer_horizontal=10)        #   调整词云中字体水平和垂直的多少$/;"	kind:variable	line:14
+prefer_horizontal	../Hongfei Yan/QT_wordcloud.py	/^               prefer_horizontal=10)        #   调整词云中字体水平和垂直的多少$/;"	kind:variable	line:14
+process-checkpoint.py	../.ipynb_checkpoints/process-checkpoint.py	1;"	kind:file	line:1
+random_state	../Hongfei Yan/QT_2grams_wordcloud.py	/^               random_state=42,             #   为每一词返回一个PIL颜色$/;"	kind:variable	line:13
+random_state	../Hongfei Yan/QT_wordcloud.py	/^               random_state=42,             #   为每一词返回一个PIL颜色$/;"	kind:variable	line:13
+re_auxiliary_words	../network generation.py	/^re_auxiliary_words = re.compile($/;"	kind:variable	line:29
+re_auxiliary_words	../nontf_w2v_implementation.py	/^re_auxiliary_words = re.compile($/;"	kind:variable	line:217
+re_auxiliary_words	../tf_w2v_implementation.py	/^re_auxiliary_words = re.compile($/;"	kind:variable	line:35
+re_auxiliary_words	../wordnetwork.py	/^re_auxiliary_words = re.compile($/;"	kind:variable	line:43
+regular_poems	../.ipynb_checkpoints/process-checkpoint.py	/^regular_poems = []$/;"	kind:variable	line:10
+regular_poems	../.ipynb_checkpoints/tmp-checkpoint.py	/^regular_poems = []$/;"	kind:variable	line:202
+regular_poems	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^regular_poems = []$/;"	kind:variable	line:202
+regular_poems	../Hongfei Yan/network generation.v0.1.py	/^regular_poems = random.sample(regular_poems, 800)$/;"	kind:variable	line:54
+regular_poems	../Hongfei Yan/network generation.v0.1.py	/^regular_poems = text.split("\\n====\\n")$/;"	kind:variable	line:47
+regular_poems	../Import and frequency.py	/^regular_poems = []$/;"	kind:variable	line:14
+regular_poems	../network generation.py	/^regular_poems = []$/;"	kind:variable	line:19
+regular_poems	../nontf_w2v_implementation.py	/^regular_poems = []$/;"	kind:variable	line:206
+regular_poems	../tf_w2v_implementation.py	/^regular_poems = []$/;"	kind:variable	line:23
+regular_poems	../wordnetwork.py	/^regular_poems = []$/;"	kind:variable	line:35
+regular_title	../.ipynb_checkpoints/process-checkpoint.py	/^regular_title = []$/;"	kind:variable	line:11
+regular_title	../.ipynb_checkpoints/tmp-checkpoint.py	/^regular_title = []$/;"	kind:variable	line:203
+regular_title	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^regular_title = []$/;"	kind:variable	line:203
+regular_title	../Import and frequency.py	/^regular_title = []$/;"	kind:variable	line:15
+regular_title	../network generation.py	/^regular_title = []$/;"	kind:variable	line:20
+regular_title	../nontf_w2v_implementation.py	/^regular_title = []$/;"	kind:variable	line:207
+regular_title	../tf_w2v_implementation.py	/^regular_title = []$/;"	kind:variable	line:24
+regular_title	../wordnetwork.py	/^regular_title = []$/;"	kind:variable	line:36
+reversescale	../wordnetwork.py	/^        reversescale=True,$/;"	kind:variable	line:165
+root	../.ipynb_checkpoints/tmp-checkpoint.py	/^root = os.getcwd()$/;"	kind:variable	line:301
+sample	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^sample = ['思','悲','忧','愁','怒','惧','乐']$/;"	kind:variable	line:235
+sample	../nontf_w2v_implementation.py	/^sample = ['思', '悲', '忧', '愁', '怒', '惧', '乐']$/;"	kind:variable	line:250
+sample	../tf_w2v_implementation.py	/^sample = ['思', '悲', '忧', '愁', '怒', '惧', '乐']$/;"	kind:variable	line:182
+save_path	../tf_w2v_implementation.py	/^        save_path = saver.save(sess, checkpoint_path)$/;"	kind:variable	line:129
+saver	../tf_w2v_implementation.py	/^saver = tf.train.Saver()$/;"	kind:variable	line:119
+scores	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^scores = model.evaluate(x_test, y_test, verbose=0)$/;"	kind:variable	line:184
+sentences	../tf_w2v_implementation.py	/^sentences = corpus$/;"	kind:variable	line:63
+sess	../tf_w2v_implementation.py	/^sess = tf.Session()$/;"	kind:variable	line:106
+settings	../.ipynb_checkpoints/tmp-checkpoint.py	/^settings = {}$/;"	kind:variable	line:330
+settings	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^settings = {}$/;"	kind:variable	line:216
+settings	../nontf_w2v_implementation.py	/^settings = {}$/;"	kind:variable	line:230
+showarrow	../wordnetwork.py	/^                    showarrow=False,$/;"	kind:variable	line:199
+showlegend	../wordnetwork.py	/^                showlegend=False,$/;"	kind:variable	line:194
+showscale	../wordnetwork.py	/^        showscale=True,$/;"	kind:variable	line:159
+showticklabels	../wordnetwork.py	/^                           showticklabels=False),$/;"	kind:variable	line:203
+sigma	../Hongfei Yan/network generation.v0.1.py	/^sigma = np.std(weight_list,ddof=0)$/;"	kind:variable	line:84
+size	../wordnetwork.py	/^        size=10,$/;"	kind:variable	line:167
+size_list	../Hongfei Yan/network generation.v0.1.py	/^size_list = [800*(x-miu)\/sigma for x in weight_list]$/;"	kind:variable	line:85
+size_list	../network generation.py	/^size_list = [((x\/np.mean(weight_list)))*100 for x in weight_list]$/;"	kind:variable	line:107
+softmax	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def softmax(self, x):$/;"	kind:member	line:81
+softmax	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def softmax(self, x):$/;"	kind:member	line:81
+softmax	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def softmax(self, x):$/;"	kind:member	line:65
+softmax	../nontf_w2v_implementation.py	/^    def softmax(self, x):$/;"	kind:member	line:80
+st	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^st=datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')$/;"	kind:variable	line:176
+stop_words	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^stop_words = set(stopwords.words('english')) $/;"	kind:variable	line:31
+stop_words	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^stop_words=new_stop_words$/;"	kind:variable	line:67
+stopwords	../.ipynb_checkpoints/process-checkpoint.py	/^stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因')$/;"	kind:variable	line:19
+stopwords	../.ipynb_checkpoints/tmp-checkpoint.py	/^stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|-')$/;"	kind:variable	line:205
+stopwords	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^stopwords = re.compile(u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因|-')$/;"	kind:variable	line:206
+stopwords	../Hongfei Yan/network generation.v0.1.py	/^                       自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三')$/;"	kind:variable	line:50
+stopwords	../Import and frequency.py	/^stopwords = re.compile($/;"	kind:variable	line:48
+stopwords	../network generation.py	/^stopwords = u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三'$/;"	kind:variable	line:28
+stopwords	../nontf_w2v_implementation.py	/^stopwords = u'而|何|乎|乃|其|且|然|若|所|为|焉|也|以|矣|于|之|则|者|与|欤|因'$/;"	kind:variable	line:216
+stopwords	../tf_w2v_implementation.py	/^stopwords = u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三'$/;"	kind:variable	line:34
+stopwords	../wordnetwork.py	/^stopwords = u'而|何|乎|乃|其|且|若|所|为|焉|以|因|于|与|也|则|者|之|不|自|得|一|来|去|无|可|是|已|此|的|上|中|兮|三'$/;"	kind:variable	line:42
+text	../.ipynb_checkpoints/process-checkpoint.py	/^text = file.read()$/;"	kind:variable	line:3
+text	../.ipynb_checkpoints/tmp-checkpoint.py	/^text = file.read()$/;"	kind:variable	line:3
+text	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^text = file.read()$/;"	kind:variable	line:3
+text	../Hongfei Yan/QT_2grams_wordcloud.py	/^text = file.read()$/;"	kind:variable	line:19
+text	../Hongfei Yan/QT_2grams_wordcloud.py	/^text = text.split('\\n')$/;"	kind:variable	line:22
+text	../Hongfei Yan/QT_2grams_wordcloud.py	/^text = text[1:]$/;"	kind:variable	line:23
+text	../Hongfei Yan/QT_wordcloud.py	/^text = file.read()$/;"	kind:variable	line:19
+text	../Hongfei Yan/QT_wordcloud.py	/^text = text.split('\\n')$/;"	kind:variable	line:22
+text	../Hongfei Yan/QT_wordcloud.py	/^text = text[1:]$/;"	kind:variable	line:23
+text	../Hongfei Yan/network generation.v0.1.py	/^text = file.read()$/;"	kind:variable	line:17
+text	../Hongfei Yan/network generation.v0.1.py	/^text = file.read()$/;"	kind:variable	line:45
+text	../Hongfei Yan/network generation.v0.1.py	/^text = file.read()$/;"	kind:variable	line:8
+text	../Hongfei Yan/network generation.v0.1.py	/^text = text.split('\\n')$/;"	kind:variable	line:20
+text	../Hongfei Yan/network generation.v0.1.py	/^text = text[1:]$/;"	kind:variable	line:21
+text	../Import and frequency.py	/^text = file.read()$/;"	kind:variable	line:8
+text	../network generation.py	/^text = file.read()$/;"	kind:variable	line:10
+text	../nontf_w2v_implementation.py	/^text = file.read()$/;"	kind:variable	line:14
+text	../tf_w2v_implementation.py	/^text = file.read()$/;"	kind:variable	line:17
+text	../wordnetwork.py	/^                    text="Hover to view node text",$/;"	kind:variable	line:198
+text	../wordnetwork.py	/^text = file.read()$/;"	kind:variable	line:26
+tf_w2v_implementation.py	../tf_w2v_implementation.py	1;"	kind:file	line:1
+thickness	../wordnetwork.py	/^            thickness=15,$/;"	kind:variable	line:169
+title	../wordnetwork.py	/^                title='<br>Between-centrality of Top 150 most-frequently-used words',$/;"	kind:variable	line:192
+title	../wordnetwork.py	/^            title='Between Centrality',$/;"	kind:variable	line:170
+titlefont_size	../wordnetwork.py	/^                titlefont_size=16,$/;"	kind:variable	line:193
+titleside	../wordnetwork.py	/^            titleside='right'$/;"	kind:variable	line:172
+tmp-checkpoint.py	../.ipynb_checkpoints/tmp-checkpoint.py	1;"	kind:file	line:1
+tmp_poem	../.ipynb_checkpoints/process-checkpoint.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:13
+tmp_poem	../.ipynb_checkpoints/process-checkpoint.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000','').split('\\n')$/;"	kind:variable	line:14
+tmp_poem	../.ipynb_checkpoints/tmp-checkpoint.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:207
+tmp_poem	../.ipynb_checkpoints/tmp-checkpoint.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000','').split('\\n')$/;"	kind:variable	line:208
+tmp_poem	../.ipynb_checkpoints/tmp-checkpoint.py	/^    tmp_poem=''.join(tmp_poem[1:]).replace('\\n',"").replace('。','').replace('，','').replace('：','').replace('；','').replace('？','').replace('！','').replace('（[.*]*?）','')$/;"	kind:variable	line:211
+tmp_poem	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:208
+tmp_poem	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000','').split('\\n')$/;"	kind:variable	line:209
+tmp_poem	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    tmp_poem=''.join(tmp_poem[1:]).replace('\\n',"").replace('。','').replace('，','').replace('：','').replace('；','').replace('？','').replace('！','').replace('（[.*]*?）','')$/;"	kind:variable	line:212
+tmp_poem	../Import and frequency.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:17
+tmp_poem	../Import and frequency.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000', '').split('\\n')$/;"	kind:variable	line:18
+tmp_poem	../network generation.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:33
+tmp_poem	../network generation.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000', '').split('\\n')$/;"	kind:variable	line:34
+tmp_poem	../nontf_w2v_implementation.py	/^    tmp_poem = ''.join(ch for ch in list($/;"	kind:variable	line:225
+tmp_poem	../nontf_w2v_implementation.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:221
+tmp_poem	../nontf_w2v_implementation.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000', '').split('\\n')$/;"	kind:variable	line:222
+tmp_poem	../tf_w2v_implementation.py	/^    tmp_poem = ''.join(ch for ch in list($/;"	kind:variable	line:43
+tmp_poem	../tf_w2v_implementation.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:39
+tmp_poem	../tf_w2v_implementation.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000', '').split('\\n')$/;"	kind:variable	line:40
+tmp_poem	../wordnetwork.py	/^    tmp_poem = poem.strip('\\n\\u3000\\u3000◎')$/;"	kind:variable	line:47
+tmp_poem	../wordnetwork.py	/^    tmp_poem = tmp_poem.replace('\\u3000\\u3000', '').split('\\n')$/;"	kind:variable	line:48
+tmp_set	../Hongfei Yan/network generation.v0.1.py	/^    tmp_set = set(list(y))$/;"	kind:variable	line:60
+tmp_set	../network generation.py	/^    tmp_set = set(list(y))$/;"	kind:variable	line:86
+tmp_set	../wordnetwork.py	/^    tmp_set = set(list(y))$/;"	kind:variable	line:99
+tmp_w2v-checkpoint.py	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	1;"	kind:file	line:1
+tokenizer	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^tokenizer = Tokenizer()$/;"	kind:variable	line:90
+top_words	../.ipynb_checkpoints/tmp-checkpoint.py	/^top_words=[]$/;"	kind:variable	line:260
+train	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def train(self, training_data):$/;"	kind:member	line:114
+train	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def train(self, training_data):$/;"	kind:member	line:114
+train	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def train(self, training_data):$/;"	kind:member	line:98
+train	../nontf_w2v_implementation.py	/^    def train(self, training_data):$/;"	kind:member	line:113
+train_step	../tf_w2v_implementation.py	/^train_step = tf.train.GradientDescentOptimizer($/;"	kind:variable	line:114
+training_data	../.ipynb_checkpoints/tmp-checkpoint.py	/^training_data = w2v.generate_training_data(settings, corpus)$/;"	kind:variable	line:340
+training_data	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^training_data = w2v.generate_training_data(settings, corpus)$/;"	kind:variable	line:227
+training_data	../nontf_w2v_implementation.py	/^training_data = w2v.generate_training_data(settings, corpus)$/;"	kind:variable	line:242
+unit_vectorization	../tf_w2v_implementation.py	/^def unit_vectorization(data_point_index, vocab_size):$/;"	kind:function	line:76
+uprint	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^def uprint(*objects, sep=' ', end='\\n', file=sys.stdout):$/;"	kind:function	line:51
+used_words	../.ipynb_checkpoints/tmp-checkpoint.py	/^used_words = top_words[0:200]$/;"	kind:variable	line:267
+used_words	../Hongfei Yan/network generation.v0.1.py	/^used_words = dict_sorted[0:74]$/;"	kind:variable	line:33
+used_words	../wordnetwork.py	/^used_words = [x[0] for x in dict_sorted[0:150]]$/;"	kind:variable	line:72
+values	../.ipynb_checkpoints/tmp-checkpoint.py	/^values=[]$/;"	kind:variable	line:290
+values	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^    values = line.split()$/;"	kind:variable	line:111
+vec_sim	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def vec_sim(self, vec, top_n):$/;"	kind:member	line:152
+vec_sim	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def vec_sim(self, vec, top_n):$/;"	kind:member	line:152
+vec_sim	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def vec_sim(self, vec, top_n):$/;"	kind:member	line:136
+vec_sim	../nontf_w2v_implementation.py	/^    def vec_sim(self, vec, top_n):$/;"	kind:member	line:155
+vec_sim	../tf_w2v_implementation.py	/^def vec_sim(vec, top_n):$/;"	kind:function	line:140
+vectors	../tf_w2v_implementation.py	/^vectors = sess.run(W1 + b1)$/;"	kind:variable	line:132
+vocab_size	../tf_w2v_implementation.py	/^vocab_size = len(words)  # gives the total number of unique words$/;"	kind:variable	line:59
+vocab_size	../tf_w2v_implementation.py	/^vocab_size = len(words)$/;"	kind:variable	line:82
+w2v	../.ipynb_checkpoints/tmp-checkpoint.py	/^w2v=word2vec()$/;"	kind:variable	line:338
+w2v	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^w2v=word2vec()$/;"	kind:variable	line:224
+w2v	../nontf_w2v_implementation.py	/^w2v = word2vec()$/;"	kind:variable	line:239
+wc	../Hongfei Yan/QT_2grams_wordcloud.py	/^wc = WordCloud(background_color="white",    #   背景颜色$/;"	kind:variable	line:7
+wc	../Hongfei Yan/QT_wordcloud.py	/^wc = WordCloud(background_color="white",    #   背景颜色$/;"	kind:variable	line:7
+weight_list	../Hongfei Yan/network generation.v0.1.py	/^weight_list = [x[1] for x in weighted_centrality_sorted]$/;"	kind:variable	line:78
+weight_list	../network generation.py	/^weight_list = [x[1] for x in weighted_centrality_sorted]$/;"	kind:variable	line:105
+weighted_centrality	../.ipynb_checkpoints/tmp-checkpoint.py	/^weighted_centrality = nx.betweenness_centrality(G, k=None, normalized=True, weight='weight', endpoints=False, seed=None)$/;"	kind:variable	line:282
+weighted_centrality_sorted	../.ipynb_checkpoints/tmp-checkpoint.py	/^weighted_centrality_sorted = sorted(weighted_centrality.items(), key=lambda d:d[1], reverse=True)$/;"	kind:variable	line:286
+weighted_centrality_sorted	../Hongfei Yan/network generation.v0.1.py	/^weighted_centrality_sorted = sorted($/;"	kind:variable	line:67
+weighted_centrality_sorted	../network generation.py	/^weighted_centrality_sorted = sorted($/;"	kind:variable	line:100
+weighted_centrality_sorted	../wordnetwork.py	/^weighted_centrality_sorted = sorted($/;"	kind:variable	line:115
+word	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^    word = values[0]$/;"	kind:variable	line:112
+word2int	../tf_w2v_implementation.py	/^word2int = {}$/;"	kind:variable	line:57
+word2onehot	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def word2onehot(self, word):$/;"	kind:member	line:87
+word2onehot	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def word2onehot(self, word):$/;"	kind:member	line:87
+word2onehot	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def word2onehot(self, word):$/;"	kind:member	line:71
+word2onehot	../nontf_w2v_implementation.py	/^    def word2onehot(self, word):$/;"	kind:member	line:86
+word2vec	../.ipynb_checkpoints/tmp-checkpoint.py	/^class word2vec():$/;"	kind:class	line:34
+word2vec	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^class word2vec():$/;"	kind:class	line:34
+word2vec	../.ipynb_checkpoints/word2vec-checkpoint.py	/^class word2vec():$/;"	kind:class	line:18
+word2vec	../nontf_w2v_implementation.py	/^class word2vec():$/;"	kind:class	line:32
+word2vec-checkpoint.py	../.ipynb_checkpoints/word2vec-checkpoint.py	1;"	kind:file	line:1
+word_dict	../Import and frequency.py	/^word_dict = {el: 0 for el in wordlist}$/;"	kind:variable	line:61
+word_dict	../network generation.py	/^word_dict = {el: 0 for el in wordlist}$/;"	kind:variable	line:41
+word_dict	../wordnetwork.py	/^word_dict = {el: 0 for el in wordlist}$/;"	kind:variable	line:55
+word_index	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^word_index = tokenizer.word_index$/;"	kind:variable	line:93
+word_indices	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^word_indices = tokenizer.texts_to_sequences(word_sequences)$/;"	kind:variable	line:92
+word_sequences	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^word_sequences=[]$/;"	kind:variable	line:73
+word_sim	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def word_sim(self, word, top_n):$/;"	kind:member	line:173
+word_sim	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def word_sim(self, word, top_n):$/;"	kind:member	line:173
+word_sim	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def word_sim(self, word, top_n):$/;"	kind:member	line:157
+word_sim	../nontf_w2v_implementation.py	/^    def word_sim(self, word, top_n):$/;"	kind:member	line:177
+word_sim	../tf_w2v_implementation.py	/^def word_sim(word, top_n):$/;"	kind:function	line:155
+word_vec	../.ipynb_checkpoints/tmp-checkpoint.py	/^    def word_vec(self, word):$/;"	kind:member	line:145
+word_vec	../.ipynb_checkpoints/tmp_w2v-checkpoint.py	/^    def word_vec(self, word):$/;"	kind:member	line:145
+word_vec	../.ipynb_checkpoints/word2vec-checkpoint.py	/^    def word_vec(self, word):$/;"	kind:member	line:129
+word_vec	../nontf_w2v_implementation.py	/^    def word_vec(self, word):$/;"	kind:member	line:149
+word_vec	../tf_w2v_implementation.py	/^def word_vec(word):$/;"	kind:function	line:135
+wordlist	../.ipynb_checkpoints/process-checkpoint.py	/^wordlist = set(data)$/;"	kind:variable	line:22
+wordlist	../.ipynb_checkpoints/tmp-checkpoint.py	/^wordlist = set(data)$/;"	kind:variable	line:217
+wordlist	../Import and frequency.py	/^wordlist = set(data)$/;"	kind:variable	line:60
+wordlist	../network generation.py	/^wordlist = set(data)$/;"	kind:variable	line:40
+wordlist	../wordnetwork.py	/^wordlist = set(data)$/;"	kind:variable	line:54
+wordnetwork.py	../wordnetwork.py	1;"	kind:file	line:1
+words	../tf_w2v_implementation.py	/^words = []$/;"	kind:variable	line:51
+words	../tf_w2v_implementation.py	/^words = set(words)$/;"	kind:variable	line:55
+words_df	../Hongfei Yan/QT_2grams_wordcloud.py	/^words_df = {}$/;"	kind:variable	line:25
+words_df	../Hongfei Yan/QT_wordcloud.py	/^words_df = {}$/;"	kind:variable	line:25
+words_df	../Hongfei Yan/network generation.v0.1.py	/^words_df = {}$/;"	kind:variable	line:23
+x	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^x=dataFrame.values[:,3]$/;"	kind:variable	line:38
+x	../network generation.py	/^    x = nodelist[i]$/;"	kind:variable	line:110
+x	../tf_w2v_implementation.py	/^x = tf.placeholder(tf.float32, [None, vocab_size], name="x")$/;"	kind:variable	line:95
+x_data	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^x_data=pad_sequences(word_indices,maxlen=MAX_SEQUENCE_LENGTH)$/;"	kind:variable	line:99
+x_train	../tf_w2v_implementation.py	/^x_train = []$/;"	kind:variable	line:83
+x_train	../tf_w2v_implementation.py	/^x_train = np.asarray(x_train)  # , dtype=np.int16)$/;"	kind:variable	line:88
+xanchor	../wordnetwork.py	/^            xanchor='left',$/;"	kind:variable	line:171
+xaxis	../wordnetwork.py	/^                xaxis=dict(showgrid=False, zeroline=False,$/;"	kind:variable	line:202
+y	../Hongfei Yan/network generation.v0.1.py	/^    y = stopwords.sub('', x)$/;"	kind:variable	line:58
+y	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^y=dataFrame.values[:,1]$/;"	kind:variable	line:39
+y	../network generation.py	/^    y = re_auxiliary_words.sub('', x)$/;"	kind:variable	line:84
+y_data	../Sentimental_Analysis_LSTM_Conv1D/main.py	/^y_data=np_utils.to_categorical(integer_encoded)$/;"	kind:variable	line:145
+y_label	../tf_w2v_implementation.py	/^y_label = tf.placeholder(tf.float32, shape=(None, vocab_size), name="y_label")$/;"	kind:variable	line:96
+y_train	../tf_w2v_implementation.py	/^y_train = []$/;"	kind:variable	line:84
+y_train	../tf_w2v_implementation.py	/^y_train = np.asarray(y_train)  # , dtype=np.int16)$/;"	kind:variable	line:92
+yaxis	../wordnetwork.py	/^                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False))$/;"	kind:variable	line:204

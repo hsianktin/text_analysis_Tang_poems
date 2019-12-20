@@ -13,6 +13,8 @@
 
 # %%
 # file import
+import time
+import sys
 import plotly
 import plotly.graph_objects as go
 from multiprocessing.dummy import Pool as ThreadPool
@@ -68,8 +70,11 @@ pool.close()
 pool.join()
 dict_sorted = sorted(word_dict.items(), key=lambda d: d[1], reverse=True)
 print('Finished sorting')
+# %%
 # Given a dictionary, evaluate the co-occurence relationship between top 148 most frequently used words
-used_words = [x[0] for x in dict_sorted[0:150] ]
+used_words = [x[0] for x in dict_sorted[0:100]]
+bigram_used_words = [set([x, y])
+                     for x in used_words for y in used_words if x != y]
 G = nx.Graph()
 G.nodes()
 for x in used_words:
@@ -79,28 +84,23 @@ count = 0
 
 
 def par_poem_networks(poem):
-    reg_poem = re_auxiliary_words.sub('', poem)
-    tmp_set = set(list(reg_poem))
-    for w in used_words:
-        for u in set(used_words)-set([w]):
-            if set([u, w]).issubset(tmp_set):
-                G[w][u]['weight'] = G[w][u]['weight']
+    tmp_set = set(list(poem))
+    for s in bigram_used_words:
+        if s.issubset(tmp_set):
+            G[list(s)[0]][list(s)[1]]['weight'] += 1
 
 
 print("Analyzing between centrality")
-pool = ThreadPool()
-pool.map(par_poem_networks, regular_poems)
+# There is no visible acceleration based on multithreading. Maybe the memory is locked by manipulating the same object
+pool = ThreadPool(8)
+cnt = 0
+for _ in pool.imap(par_poem_networks, regular_poems):
+    sys.stdout.write('done %d/%d\r' % (cnt, len(regular_poems)))
+    cnt += 1
 pool.close()
 pool.join()
-print('Finished')  # parallel computing here doesn't accelerate much
 
-for x in regular_poems:
-    count += 1
-    tmp_set = set(list(y))
-    for w in used_words:
-        for u in set(used_words)-set([w]):
-            if set([u, w]).issubset(tmp_set):
-                G[w][u]['weight'] = G[w][u]['weight'] + 1
+print('Finished')  # parallel computing here doesn't accelerate much
 
 
 centrality = nx.betweenness_centrality(G, k=None, normalized=True,
@@ -110,6 +110,9 @@ for x in G.nodes():
     G.nodes[x]['weight'] = centrality[x]
     G.nodes[x]['rec_wei'] = 1/centrality[x]
 
+# %% Debugging section
+# for x in G.edges(data=True):
+#     print(x)
 
 
 # %%
@@ -122,11 +125,13 @@ nodelist = [x[0] for x in weighted_centrality_sorted]
 # nodecolorlist = [x/max(weight_list)*255 for x in weight_list]
 # size_list = [((x/np.mean(weight_list)))*50 for x in weight_list]
 # print(centrality)
-centrality_layout = nx.kamada_kawai_layout(
-    G, pos=None, weight='weight', scale=5, center=None, dim=2)
+# centrality_layout = nx.kamada_kawai_layout(
+#     G, pos=None, weight='weight', scale=5, center=None, dim=2)
 
 
 # %%
+centrality_layout = nx.spring_layout(
+    G, k=100, pos=None, weight='weight', scale=5, center=None, dim=2)
 edge_x = []
 edge_y = []
 for edge in G.edges():
@@ -175,7 +180,6 @@ node_trace = go.Scatter(
         line_width=2))
 
 
-# %%
 node_text = []
 node_bc = []
 for node in G.nodes():
@@ -187,10 +191,9 @@ node_trace.marker.color = node_bc
 node_trace.text = node_text
 
 
-# %%
 fig = go.Figure(data=[edge_trace, node_trace],
                 layout=go.Layout(
-                title='<br>Between-centrality of Top 150 most-frequently-used words',
+                title='<br>Between-centrality of Top 100 most-frequently-used words',
                 titlefont_size=16,
                 showlegend=False,
                 hovermode='closest',
@@ -206,9 +209,8 @@ fig = go.Figure(data=[edge_trace, node_trace],
                 )
 
 
-# %%
-plotly.offline.plot(fig, filename='word_network_kamda_layout.html')
+plotly.offline.plot(fig, filename='100_word_network_kamda_layout.html')
 
 
 # %%
-print('Fig has been saved as word_network.html.')
+print('Fig has been saved as word_network_kamda_layout.html.')
