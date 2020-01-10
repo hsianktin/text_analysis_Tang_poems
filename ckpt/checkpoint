@@ -1,0 +1,4 @@
+model_checkpoint_path: "w2v-300"
+all_model_checkpoint_paths: "w2v-100"
+all_model_checkpoint_paths: "w2v-200"
+all_model_checkpoint_paths: "w2v-300"

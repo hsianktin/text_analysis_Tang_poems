@@ -2,17 +2,19 @@
 
 This repository is a realization of text analysis based on the introduction to mini project in PKU CS101, for CCME freshmen. It's incomplete and welcome any further work based on my repository. I don't really have time to adjust code for readability. Sorry for the inconvenience.
 
-## Updates
+## Update 2020.1.10
 
-Interactive network geenerated by 'word_network.py'
+- Gensim/Google w2v implementation used.
+- Sentiment analysis built via keras with simple lstm layer.
+- Poetry composer
 
+## Updates 2019.12
 
-## Reference
-用文本挖掘剖析近5万首《全唐诗》 http://www.woshipm.com/data-analysis/970466.html
+- Interactive network geenerated by 'word_network.py'
 
+## References
 
-Things got stuck when trying to realize w2v network.
-There are two obstacles. First, initialize a large matrix is memory-expensive. I used Google's Colab to help training. But the memory still exceeds the limit. Second, I used the standard network and 1000 poems to iterate for 3000 steps. The outcome is still unpromising.
+用文本挖掘剖析近5万首《全唐诗》 <http://www.woshipm.com/data-analysis/970466.html>
 
 ## Acknoweldgements
 
@@ -20,4 +22,6 @@ Thanks for Prof. Yan for his advice and contribution.
 
 ## Known Issues
 
-[ ] Word to vector mapping is far from ideal.
+[ ] Poetry composer needs to be trained.
+
+[ ] Sentiment analysis is in great lack of tagged data. Current work-around used a simple principle of tag-by-word-occurence, and thus please don't expect the performance of sentiment analysis.
